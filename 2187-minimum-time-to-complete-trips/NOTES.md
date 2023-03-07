@@ -1,1 +1,1 @@
-use binary search and givenTime/time[i] to find total number of trips
+​
