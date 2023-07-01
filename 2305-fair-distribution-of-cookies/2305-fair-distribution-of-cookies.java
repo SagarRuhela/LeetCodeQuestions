@@ -19,7 +19,10 @@ class Solution {
         for(int i=0;i<k;i++){
         count[i]=count[i]+cookies[index];
          helper(cookies,index+1,k);
-         count[i]=count[i]-cookies[index];   
+         count[i]=count[i]-cookies[index];  
+         if(count[i]==0){
+             break;
+         }
         }
     }
 }
