@@ -1,1 +1,1 @@
-​
+keep the track of last smallest element
