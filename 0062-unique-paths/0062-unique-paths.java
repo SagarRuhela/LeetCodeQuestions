@@ -1,8 +1,6 @@
 class Solution {
     public int uniquePaths(int m, int n) {
-  if (m == 0 || n == 0) {
-    throw new IllegalArgumentException("m or n can't be 0");
-  }
+ 
   int[][] mem = new int[m][n];
   for (int i = 0; i < m; ++i) { // init
     for (int j = 0; j < n; ++j) {
