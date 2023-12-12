@@ -1,13 +1,21 @@
 class Solution {
     public int maxProduct(int[] nums) {
-       PriorityQueue<Integer> pq=new PriorityQueue<>(Collections.reverseOrder());
-        for(int i=0;i<nums.length;i++){
-            for(int j=i+1;j<nums.length;j++){
-                int temp=(nums[i]-1)*(nums[j]-1);
-                pq.add(temp);
-            }
+        int n=nums.length;
+      int max1=-1;
+      int idx=-1;
+      for(int i=0;i<n;i++){
+          int temp=Math.max(max1,nums[i]);
+          if(temp!=max1){
+              max1=temp;
+              idx=i;
+          }
+      }
+        nums[idx]=-1;
+        int max2=-1;
+        for(int i:nums){
+            max2=Math.max(i,max2);
         }
-        return pq.peek();
+        return (max1-1)*(max2-1);
     }
     
 }
