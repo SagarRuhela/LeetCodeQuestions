@@ -15,6 +15,11 @@ class Solution {
                 map.get(str).add(s1);
             }
         }
-        return new ArrayList<>(map.values());
+        List<List<String>> ans=new ArrayList<>();
+        for(String c:map.keySet()){
+            List<String> temp=map.get(c);
+            ans.add(temp);
+        }
+        return ans;
     }
 }
