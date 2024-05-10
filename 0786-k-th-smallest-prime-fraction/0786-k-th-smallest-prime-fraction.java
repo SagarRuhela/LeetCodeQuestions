@@ -7,6 +7,7 @@ class Solution {
                 double frac = (double)arr[i]/arr[j];
                 
                 maxHeap.add(new Pair(frac, arr[i], arr[j]));
+              
 
                 if(maxHeap.size()>k){
                     maxHeap.remove(maxHeap.peek());
@@ -14,6 +15,7 @@ class Solution {
                 
             }
         }
+        
         return new int[]{maxHeap.peek().val1,maxHeap.peek().val2};
     }
 
